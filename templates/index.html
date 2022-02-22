@@ -18,22 +18,6 @@
 </div>
 {% else %}
 
-<form action="/tweet" method="POST">
-  <textarea name="tweet" id="tweet">Write something here!</textarea>
-  <button class="w-100 btn btn-lg btn-primary" type="submit">Tweet!</button>
-</form>
-
-<hr>
-
-<div id="tweets">
-  {% for tweet in tweets %}
-  <div class="tweet">
-    <img src="{{tweet[1]}}" alt="image for {{tweet[2]}}" class="profile">
-    <span><a href="{{url_for('user_detail', user_id=tweet[0])}}">{{tweet[2]}}</a>: {{tweet[3]}}</span>
-  </div>
-  {% endfor %}
-</div>
-
 {% endif %}
 
 {% endblock %}
